@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <title>CGPA Calculator Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">🎓 CGPA<span>Pro</span></div>
+    <button id="themeBtn" class="icon-btn" type="button">☀️</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">STUDENT TOOL</p>
+      <h1>Calculate your <span>CGPA</span> with confidence.</h1>
+      <p>Fast, simple and mobile-friendly GPA & CGPA calculator for semester results.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <h2>Semester GPA / SGPA</h2>
+          <p>Add subjects, credits and grades.</p>
+        </div>
+        <button id="addSubject" class="primary" type="button">＋ Add Subject</button>
+      </div>
+
+      <div id="subjects"></div>
+
+      <div class="result-grid">
+        <div class="result-box">
+          <small>Semester GPA</small>
+          <strong id="gpaResult">0.00</strong>
+        </div>
+        <div class="result-box">
+          <small>Percentage</small>
+          <strong id="gpaPercent">0.00%</strong>
+        </div>
+        <div class="result-box">
+          <small>Status</small>
+          <strong id="gpaStatus">—</strong>
+        </div>
+      </div>
+      <p id="gpaMessage" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <h2>Overall CGPA</h2>
+          <p>Enter GPA and total credits for each semester.</p>
+        </div>
+        <button id="addSemester" class="secondary" type="button">＋ Add Semester</button>
+      </div>
+
+      <div id="semesters"></div>
+
+      <div class="result-grid">
+        <div class="result-box highlight">
+          <small>Overall CGPA</small>
+          <strong id="cgpaResult">0.00</strong>
+        </div>
+        <div class="result-box">
+          <small>Percentage</small>
+          <strong id="cgpaPercent">0.00%</strong>
+        </div>
+        <div class="result-box">
+          <small>Performance</small>
+          <strong id="cgpaStatus">—</strong>
+        </div>
+      </div>
+      <p id="cgpaMessage" class="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Grade Scale</h2>
+      <div class="grades">
+        <div><b>S</b><span>10 Points</span></div>
+        <div><b>A</b><span>9 Points</span></div>
+        <div><b>B</b><span>8 Points</span></div>
+        <div><b>C</b><span>7 Points</span></div>
+        <div><b>D</b><span>6 Points</span></div>
+        <div><b>E</b><span>5 Points</span></div>
+        <div><b>F</b><span>0 Points</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Formulas</h2>
+      <div class="formula">
+        <b>GPA / SGPA</b>
+        <code>Σ(Credit × Grade Point) ÷ Σ(Credits)</code>
+      </div>
+      <div class="formula">
+        <b>CGPA</b>
+        <code>Σ(GPA × Semester Credits) ÷ Σ(Semester Credits)</code>
+      </div>
+      <div class="formula">
+        <b>Percentage</b>
+        <code>CGPA × 10</code>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="saveBtn" class="primary" type="button">💾 Save</button>
+      <button id="loadBtn" class="secondary" type="button">↻ Load</button>
+      <button id="printBtn" class="secondary" type="button">🖨 Print</button>
+      <button id="resetBtn" class="danger" type="button">Reset</button>
+    </section>
+  </main>
+
+  <footer>© 2026 CGPA Pro · Made for students</footer>
+  <script src="script.js"></script>
+</body>
+</html>
